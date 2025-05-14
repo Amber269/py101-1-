@@ -1,0 +1,76 @@
+site_name: AI Programming in Python
+
+copyright: Atheris hispida
+
+theme:
+  name: material
+  favicon: assets/favicon.png
+  logo: assets/logo.png
+
+# 在这里添加或修改 nav 配置
+nav:
+  - 'Home': 'index.en.md' # 假设你有一个 docs/index.md (或 docs/en/index.md, docs/zh/index.md)作为首页
+
+  - 'Python 101 Courseware': # 这是顶级导航项的显示名称
+    - 'Unit 0: Introduction': 
+       - 'Syllabus': '101课件/U0/syllabus.md'
+       - 'Vscode': '101课件/U0/deck0_vscode(2).md'
+    - 'Unit 1: Basics': 
+       - 'deck1_1': '101课件/U1/deck1_1.md'
+       - 'deck1_2': '101课件/U1/deck1_2.md'
+       - 'Iterable': '101课件/U1/Iterable.md'
+       - 'Reference': '101课件/U1/01reference.md'
+    - 'Unit 2: Functions': 
+       - 'deck2_1': '101课件/U2/deck2_1.md'
+       - 'deck2_2': '101课件/U2/deck2_2.md'
+       - 'Project': '101课件/U2/deck2_3_project.md'
+    - 'Unit 3: Numpy and Pandas': 
+       - 'deck3_1': '101课件/U3/deck3_1.md'
+       - 'deck3_2': '101课件/U3/deck3_2.md'
+       - 'deck3_3': '101课件/U3/deck3_3.md'
+    - 'Unit 4: Matplotlib': 
+       - 'deck4_1': '101课件/U4/deck4_1.md'
+       - 'deck4_2': '101课件/U4/deck4_2.md'
+       - 'deck4_3': '101课件/U4/deck4_3.md'
+    - 'Unit 5: Machine learning with scikit-learn': 
+       - 'deck5_1': '101课件/U5/deck5_1.md'
+    - 'Unit 6: OOP': 
+       - 'deck6_1': '101课件/U6/deck6_1.md'
+    - 'Unit 7: LLMs and RAG': 
+       - 'deck7_1': '101课件/U7/deck7_1.md'
+       - 'Requirements': '101课件/U7/Requirements.md'
+    # 如果每个单元下还有更多 .md 文件，你可以继续嵌套：
+    # - 'Unit 1: Basics':
+    #   - 'Overview': '101课件/U1/index.md'
+    #   - 'Variables': '101课件/U1/variables.md'
+    #   - 'Operators': '101课件/U1/operators.md'
+
+  # 你可以添加其他顶级导航项，比如：
+  # - 'Advanced Topics': 'advanced/some_topic.md'
+  # - 'API Reference': 'api/reference.md'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+          site_name: 人工智能程序设计
+  - search:
+
+extra_css:
+  - stylesheets/extra.css
